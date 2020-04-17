@@ -26,6 +26,36 @@
       <img id="topFront" src="img/top-front-window.png">
       <img id="frontDoor" src="img/front-door.png">
       <img id="roomDoor" src="img/room-door.png">
+
+      <!-- Artwork -->
+      <img id="2ndPlace" src="img/art_files/2nd-Place.jpg">
+      <img id="3rdPlace" src="img/art_files/3rd-Place.jpg">
+      <img id="HM5" src="img/art_files/HM5.jpg">
+      <img id="HM2" src="img/art_files/HM2.jpg">
+      <img id="HM3" src="img/art_files/HM3.PNG">
+      <img id="HM4" src="img/art_files/HM4.jpeg">
+      <img id="HM6" src="img/art_files/HM6.jpg">
+      <img id="HM71" src="img/art_files/HM7-1.PNG">
+      <img id="HM72" src="img/art_files/HM7-2.PNG">
+      <img id="HM73" src="img/art_files/HM7-3.PNG">
+      <img id="HM91" src="img/art_files/HM9-1.PNG">
+      <img id="HM92" src="img/art_files/HM9-2.jpg">
+      <img id="HM101" src="img/art_files/HM10-1.jpg">
+      <img id="HM103" src="img/art_files/HM10-3.jpg">
+      <img id="HM104" src="img/art_files/HM10-4.jpg">
+      <img id="HM11" src="img/art_files/HM11.jpeg">
+      <img id="HM12" src="img/art_files/HM12.jpg">
+      <img id="HM141" src="img/art_files/HM14-1.PNG">
+      <img id="HM142" src="img/art_files/HM14-2.PNG">
+      <img id="HM15" src="img/art_files/HM15.PNG">
+      <img id="JA" src="img/art_files/Jurors-Choice.PNG">
+      <img id="MA" src="img/art_files/Merit-Award.jpeg">
+
+        <!-- Video -->
+
+        <video id="1stPlace" autoplay:false loop="true" webkit-playsinline playsinline src="img/art_files/video/1st-Place.mp4"></video>
+        <video id="HM8" autoplay:false loop="true" webkit-playsinline playsinline src="img/art_files/video/HM8.mp4"></video>
+        <video id="HM143" autoplay:false loop="true" webkit-playsinline playsinline src="img/art_files/video/HM14-3.mp4"></video>
     </a-assets>
 
     <!-- User / Camera -->
@@ -35,20 +65,19 @@
       universal-controls
       kinematic-body
       listener
-      position: "0 9 0"
-    ></a-entity>
+      position: "0 9 0">
+    </a-entity>
 
 
     <!-- Start Room (spawn) -->
     <a-entity position="-1.5 1.5 19.5" rotation="0 0 0">
-    
     </a-entity>
    
     <a-entity position="-10.5 1.5 7.5" rotation="0 90 0">
       <a-image position="11.994 0.341 4.551" rotation="0 -90 0" src="#door" height="1.5" width="3" geometry="height:4;width:2"></a-image>
     </a-entity>
 
-    <a-image position="-0.374 3.839 -13.553" src="#window" height="5" width="5" geometry="height:10;width:8"></a-image>
+    <!-- <a-image position="-0.374 3.839 -13.553" src="#window" height="5" width="5" geometry="height:10;width:8"></a-image> -->
    
     <a-image position="-0.51 5.576 8.095" src="#topFront" height="5" width="5" geometry="height:3;width:6"></a-image>
 
@@ -56,13 +85,49 @@
 
    <!--  <a-image position="-8.37 1.974 -4.403" src="#roomDoor" height="5" width="5" geometry="height:4;width:2"></a-image>-->
 
+   <!-- Artwork -->
+   <a-image position="-4.489 2.322 6.718" src="#HM91" height="5" width="5" geometry="height:1.5;width:2.2" rotation="0 90 0"></a-image>
+   <a-image position="-4.489 2.322 4.027" src="#HM92" height="5" width="5" geometry="height:1.5;width:2.2" rotation="0 90 0"></a-image>
+
+   <a-image position="-7.471 2.322 0.277" src="#HM101" height="5" width="5" geometry="height:1.75;width:1.25" rotation="0 90 0"></a-image>
+   <a-image position="-7.445 2.332 1.725" src="#HM103" height="5" width="5" geometry="height:1.75;width:1.25" rotation="0 90 0"></a-image>
+   <a-image position="-7.438 2.322 -1.162" src="#HM104" height="5" width="5" geometry="height:1.75;width:1.25;segmentsHeight:2" rotation="0 90 0"></a-image>
+
+   <a-image position="-12.653 2.322 2.237" src="#HM2" height="5" width="5" geometry="height:2;width:1.5" rotation="0 90 0"></a-image>
+   <a-image position="-12.702 2.322 -0.127" src="#HM3" height="5" width="5" geometry="height:2.5;width:1.75" rotation="0 90 0"></a-image>
+
+   <a-image position="-8.615 2.322 -4.484" src="#HM71" height="5" width="5" geometry="height:2;width:1.5"></a-image>
+   <a-image position="-10.504 2.569 -4.491" src="#HM73" height="5" width="5" geometry="height:1.5;width:2"></a-image>
+   <a-image position="-12.366 2.322 -4.469" src="#HM72" height="5" width="5" geometry="height:2;width:1.5"></a-image>
+
+   <a-image position="-7.518 2.322 1.851" src="#HM5" height="5" width="5" geometry="height:2;width:1.5" rotation="0 -90 0"></a-image>
+   <a-image position="-7.511 2.322 -0.376" src="#HM6" height="5" width="5" geometry="height:2;width:1.5" rotation="0 -90 0"></a-image>
+
+   <a-image position="-4.489 2.322 -7.227" src="#MA" height="5" width="5" geometry="height:1.75;width:2.5" rotation="0 90 0"></a-image>
+   <a-image position="-4.489 2.322 -10.449" src="#JA" height="5" width="5" geometry="height:2;width:2.2" rotation="0 90 0"></a-image>
+  
+   <a-video src="#1stPlace" width="7" height="5.25" position="0.747 2.332 -13.598" geometry="height:2.25;width:4"></a-video>
+   <a-image position="-2.927 2.322 -13.598" src="#2ndPlace" height="5" width="5" geometry="height:1.75;width:2.5;segmentsHeight:2"></a-image>
+   <a-image position="4.434 2.322 -13.598" src="#3rdPlace" height="5" width="5" geometry="height:1.75;width:2.5"></a-image>
+ 
+   <a-image position="6.063 2.322 -11.866" src="#HM15" height="5" width="5" geometry="height:2.2;width:1.5" rotation="0 -90 0"></a-image>
+   <a-image position="6.08 2.332 -8.932" src="#HM141" height="5" width="5" geometry="height:1.8;width:2.5" rotation="0 -90 0"></a-image>
+   <a-image position="6.08 2.332 -6.288" src="#HM142" height="5" width="5" geometry="height:1.8;width:2.5" rotation="0 -90 0"></a-image>
+   <a-video src="#HM143" width="7" height="5.25" position="6.081 2.322 -2.874" geometry="height:2;width:4" rotation="0 -90 0"></a-video>
+
+   <a-video src="#HM8" width="7" height="5.25" position="7.717 2.332 5.49" geometry="height:2.25;width:4" rotation="0 -90 0"></a-video>
+
+   
+   <a-image position="6.074 2.322 1.517" src="#HM11" height="5" width="5" geometry="height:1.5;width:2" rotation="0 -90 -90"></a-image>
+   <a-image position="3.114 2.19 -1.466" src="#HM12" height="5" width="5" geometry="height:2;width:1.5"></a-image>
+   <a-image position="-2.604 2.19 -4.07" src="#HM4" height="5" width="5" geometry="height:2;width:1.5"></a-image> 
 
 
     <!-- Ground -->
     <a-grid id="ground" static-body material="src: #floor; repeat: 20 20;" rotation="0 -90 0" geometry="height:35;width:35"></a-grid>
 
     <!-- Walls (used by map.js -->)
-     <a-entity id="walls"><a-box width="3" height="12" depth="3" position="-14.22 1.339 -0.154" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-14.22 1.339 2.527" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-11.321 1.322 6.295" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 1.8"></a-box><a-box width="3" height="12" depth="3" position="-8.9 1.322 6.295" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 1.8"></a-box><a-box width="3" height="12" depth="3" position="-14.868 1.334 -3.15" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-11.895 1.5 -5.996" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-8.918 1.5 -5.996" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-7.495 5.7 -2.99" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.01 0.3 1"></a-box><a-box width="3" height="12" depth="3" position="-7.495 1.5 -0.582" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.01 1 1"></a-box><a-box width="3" height="12" depth="3" position="-7.495 1.5 -5.918" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.05 1 1"></a-box><a-box width="3" height="12" depth="3" position="-7.495 1.5 0.701" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.01 1 1"></a-box><a-box width="3" height="12" depth="3" position="-7.495 1.5 3.418" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.01 1 1"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 -14.923" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 -11.963" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 -8.985" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 -5.996" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 6.642" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 4.076" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="2.898 1.5 8.546" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 0.3"></a-box><a-box width="3" height="12" depth="3" position="6.017 1.5 8.546" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 0.3"></a-box><a-box width="3" height="12" depth="3" position="3.77 1.5 8.546" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 0.3"></a-box><a-box width="3" height="12" depth="3" position="-0.073 1.5 8.546" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 0.3"></a-box><a-box width="3" height="12" depth="3" position="-3.026 1.5 8.546" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 0.3"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 8.546" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 0.3"></a-box><a-box width="3" height="12" depth="3" position="-2.927 1.509 -15.1" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.5 1 1"></a-box><a-box width="3" height="12" depth="3" position="-0.092 1.509 -15.1" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.5 1 1"></a-box><a-box width="3" height="12" depth="3" position="3.043 1.509 -15.1" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="5.568 1.5 -10.757" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="6.003 1.5 -14.755" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="6 1.5 -14.473" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="6.014 1.509 -15.1" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="5.568 1.5 -12.133" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="5.568 1.5 -8.983" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="5.568 1.5 -6" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="5.568 1.5 -3" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="5.568 1.5 0" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="5.568 1.5 3" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="5.568 1.5 7.814" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 0.2"></a-box><a-box width="3" height="12" depth="3" position="6.382 1.5 6" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.75 1 1"></a-box></a-entity>
+    <a-entity id="walls"><a-box width="3" height="12" depth="3" position="-14.22 1.339 -0.154" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-14.22 1.339 2.527" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-11.321 1.322 6.295" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 1.8"></a-box><a-box width="3" height="12" depth="3" position="-8.9 1.322 6.295" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 1.8"></a-box><a-box width="3" height="12" depth="3" position="-14.868 1.334 -3.15" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-11.895 1.5 -5.996" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-8.918 1.5 -5.996" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-7.495 5.7 -2.99" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.01 0.3 1"></a-box><a-box width="3" height="12" depth="3" position="-7.495 1.5 -0.582" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.01 1 1"></a-box><a-box width="3" height="12" depth="3" position="-7.495 1.5 -5.918" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.05 1 1"></a-box><a-box width="3" height="12" depth="3" position="-7.495 1.5 0.701" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.01 1 1"></a-box><a-box width="3" height="12" depth="3" position="-7.495 1.5 3.418" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.01 1 1"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 -14.923" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 -11.963" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 -8.985" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 -5.996" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 6.642" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 4.076" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="2.898 1.5 8.546" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 0.3"></a-box><a-box width="3" height="12" depth="3" position="6.017 1.5 8.546" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 0.3"></a-box><a-box width="3" height="12" depth="3" position="3.77 1.5 8.546" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 0.3"></a-box><a-box width="3" height="12" depth="3" position="-0.073 1.5 8.546" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 0.3"></a-box><a-box width="3" height="12" depth="3" position="-3.026 1.5 8.546" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 0.3"></a-box><a-box width="3" height="12" depth="3" position="-6 1.5 8.546" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1 1 0.3"></a-box><a-box width="3" height="12" depth="3" position="-2.927 1.509 -15.1" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.5 1 1"></a-box><a-box width="3" height="12" depth="3" position="-0.092 1.509 -15.1" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.5 1 1"></a-box><a-box width="3" height="12" depth="3" position="3.043 1.509 -15.1" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="8.045 1.5 -10.757" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="8.504 1.5 -15.1" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="5.817 1.509 -15.1" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN"></a-box><a-box width="3" height="12" depth="3" position="8.045 1.5 -12.133" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="8.045 1.5 -8.983" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="8.045 1.5 -6" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="8.045 1.5 -3" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="8.045 1.5 0" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 1"></a-box><a-box width="3" height="12" depth="3" position="8.045 1.502 2.325" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 0.6"></a-box><a-box width="3" height="12" depth="3" position="3.077 0.589 -1.451" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.6 0.1 0.25" geometry=""></a-box><a-box width="3" height="12" depth="3" position="-2.603 0.589 -4.053" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.6 0.1 0.25"></a-box><a-box width="3" height="12" depth="3" position="8.045 1.5 7.943" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="1.3 1 0.1"></a-box><a-box width="3" height="12" depth="3" position="8.868 1.5 5.556" color="#fff" material="repeat:4 4;src:#wall" static-body="sphereRadius:NaN" scale="0.75 1 1.6"></a-box></a-entity>
    
       <!-- Sky -->
     <a-sky id="sky" color="white"></a-sky>
@@ -70,6 +135,7 @@
   </a-scene>
 
   <script src="js/map.js"></script>
+  <script src="js/video.js"></script>
  
 
 </body>
