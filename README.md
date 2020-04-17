@@ -1,6 +1,7 @@
-# Marketing Presentation in VR Demo
+# PNCA Student Gallery VR experiment
 
-This is a simple demonstration of how easy it is to build virtual reality presentations using A-Frame.
+This code is cloned off of [@slightlyoffbeat's Marketing VR example](https://github.com/slightlyoffbeat/marketing-vr)
+
 
 ### Installation
 
