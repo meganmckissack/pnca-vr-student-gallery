@@ -10,11 +10,12 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.6.0/aframe-master.min.js"></script>
   <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.6/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
 
 </head>
 <body>
 
-  <a-scene fog="type: linear; color: #000; far: 16; near: 7">
+  <a-scene>
 
     <!-- Load Assets -->
     <a-assets>
@@ -29,7 +30,7 @@
 
       <!-- Artwork -->
       <img id="2ndPlace" src="img/art_files/2nd-Place.jpg">
-      <img id="3rdPlace" src="img/art_files/3rd-Place.jpg">
+      <img id="3rdPlace" src="img/art_files/3rd-Place.JPG">
       <img id="HM5" src="img/art_files/HM5.jpg">
       <img id="HM2" src="img/art_files/HM2.jpg">
       <img id="HM3" src="img/art_files/HM3.PNG">
@@ -53,9 +54,10 @@
 
         <!-- Video -->
 
-        <video id="1stPlace" autoplay:false loop="true" webkit-playsinline playsinline src="img/art_files/video/1st-Place.mp4"></video>
+        <video id="1stPlace" autoplay:false webkit-playsinline playsinline src="img/art_files/video/1st-Place.mp4"></video>
         <video id="HM8" autoplay:false loop="true" webkit-playsinline playsinline src="img/art_files/video/HM8.mp4"></video>
         <video id="HM143" autoplay:false loop="true" webkit-playsinline playsinline src="img/art_files/video/HM14-3.mp4"></video>
+       <!-- <video id="HM1" autoplay:false loop="true" webkit-playsinline playsinline src="img/art_files/video/HM1.mp4"></video> -->
     </a-assets>
 
     <!-- User / Camera -->
@@ -66,6 +68,7 @@
       kinematic-body
       listener
       position: "0 9 0">
+      <a-cursor></a-cursor>
     </a-entity>
 
 
@@ -79,48 +82,173 @@
 
     <!-- <a-image position="-0.374 3.839 -13.553" src="#window" height="5" width="5" geometry="height:10;width:8"></a-image> -->
    
-    <a-image position="-0.51 5.576 8.095" src="#topFront" height="5" width="5" geometry="height:3;width:6"></a-image>
+    <a-image position="0.271 5.576 8.095" src="#topFront" height="5" width="5" geometry="height:3;width:6"></a-image>
 
-    <a-image position="-0.51 1.806 8.095" src="#frontDoor" height="5" width="5" geometry="height:3.75;width:6" rotation="0 180 0"></a-image>
+    <a-image position="0.305 1.806 8.095" src="#frontDoor" height="5" width="5" geometry="height:3.75;width:6" rotation="0 180 0"></a-image>
 
    <!--  <a-image position="-8.37 1.974 -4.403" src="#roomDoor" height="5" width="5" geometry="height:4;width:2"></a-image>-->
 
    <!-- Artwork -->
-   <a-image position="-4.489 2.322 6.718" src="#HM91" height="5" width="5" geometry="height:1.5;width:2.2" rotation="0 90 0"></a-image>
-   <a-image position="-4.489 2.322 4.027" src="#HM92" height="5" width="5" geometry="height:1.5;width:2.2" rotation="0 90 0"></a-image>
+    <a-image position="-4.489 2.322 6.718" src="#HM91" height="5" width="5" geometry="height:1.5;width:2.2" rotation="0 90 0"
+    event-set__down="_event: mousedown; _target: #artistTextHM9; visible: true"
+    event-set__up="_event: mouseup; _target: #artistTextHM9; visible: false">
+    <a-text id="artistTextHM9" value="Luna Enriquez \n Foodie \n Cardboard, Hot Glue, Acrylic Paint" align="center" color="#000" visible="false" scale=".6 .6 .6" position="1.372 -1.274 0.4"
+    geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+   </a-image>
+   <a-image position="-4.489 2.322 4.027" src="#HM92" height="5" width="5" geometry="height:1.5;width:2.2" rotation="0 90 0" 
+   event-set__down="_event: mousedown; _target: #artistTextHM9; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM9; visible: false">
+   <a-text id="artistTextHM9" value="Luna Enriquez \n Foodie \n Cardboard, Hot Glue, Acrylic Paint" align="center" color="#000" visible="false" scale=".6 .6 .6" position="1.372 -1.274 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
 
-   <a-image position="-7.471 2.322 0.277" src="#HM101" height="5" width="5" geometry="height:1.75;width:1.25" rotation="0 90 0"></a-image>
-   <a-image position="-7.445 2.332 1.725" src="#HM103" height="5" width="5" geometry="height:1.75;width:1.25" rotation="0 90 0"></a-image>
-   <a-image position="-7.438 2.322 -1.162" src="#HM104" height="5" width="5" geometry="height:1.75;width:1.25;segmentsHeight:2" rotation="0 90 0"></a-image>
+   <a-image position="-7.471 2.322 0.277" src="#HM101" height="5" width="5" geometry="height:1.75;width:1.25" rotation="0 90 0"
+   event-set__down="_event: mousedown; _target: #artistTextHM10; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM10; visible: false">
+   <a-text id="artistTextHM10" value="Dannielle Nolan \n Object (Front and Side Views) \n Oil on Canvas" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.013 -1.365 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
+   <a-image position="-7.445 2.332 1.725" src="#HM103" height="5" width="5" geometry="height:1.75;width:1.25" rotation="0 90 0"
+   event-set__down="_event: mousedown; _target: #artistTextHM10; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM10; visible: false">
+   <a-text id="artistTextHM10" value="Dannielle Nolan \n Object (Front and Side Views) \n Oil on Canvas" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.013 -1.365 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
+   <a-image position="-7.438 2.322 -1.162" src="#HM104" height="5" width="5" geometry="height:1.75;width:1.25;segmentsHeight:2" rotation="0 90 0"
+   event-set__down="_event: mousedown; _target: #artistTextHM10; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM10; visible: false">
+   <a-text id="artistTextHM10" value="Dannielle Nolan \n Object (Front and Side Views) \n Oil on Canvas" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.013 -1.365 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
 
-   <a-image position="-12.653 2.322 2.237" src="#HM2" height="5" width="5" geometry="height:2;width:1.5" rotation="0 90 0"></a-image>
-   <a-image position="-12.702 2.322 -0.127" src="#HM3" height="5" width="5" geometry="height:2.5;width:1.75" rotation="0 90 0"></a-image>
+   <a-image position="-12.653 2.322 2.237" src="#HM2" height="5" width="5" geometry="height:2;width:1.5" rotation="0 90 0"
+   event-set__down="_event: mousedown; _target: #artistTextHM2; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM2; visible: false">
+   <a-text id="artistTextHM2" value="Beth Jensen \n Feast \n Digital" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.111 -1.387 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
+   <a-image position="-12.702 2.322 -0.127" src="#HM3" height="5" width="5" geometry="height:2.5;width:1.75" rotation="0 90 0"
+   event-set__down="_event: mousedown; _target: #artistTextHM3; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM3; visible: false">
+   <a-text id="artistTextHM3" value="Stevie Hale \n Selfie \n Gouache on Paper" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.023 -1.62 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
 
-   <a-image position="-8.615 2.322 -4.484" src="#HM71" height="5" width="5" geometry="height:2;width:1.5"></a-image>
-   <a-image position="-10.504 2.569 -4.491" src="#HM73" height="5" width="5" geometry="height:1.5;width:2"></a-image>
-   <a-image position="-12.366 2.322 -4.469" src="#HM72" height="5" width="5" geometry="height:2;width:1.5"></a-image>
+   <a-image position="-8.615 2.322 -4.484" src="#HM71" height="5" width="5" geometry="height:2;width:1.5"
+   event-set__down="_event: mousedown; _target: #artistTextHM7; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM7; visible: false">
+   <a-text id="artistTextHM7" value="Blake Tupman \n Relying On Oneself \n Denim, Digital Illustration, Thread" align="center" color="#000" visible="false" scale=".6 .6 .6" position="-1.794 -1.349 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
+   <a-image position="-10.504 2.569 -4.491" src="#HM73" height="5" width="5" geometry="height:1.5;width:2"
+   event-set__down="_event: mousedown; _target: #artistTextHM7; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM7; visible: false">
+   <a-text id="artistTextHM7" value="Blake Tupman \n Relying On Oneself \n Denim, Digital Illustration, Thread" align="center" color="#000" visible="false" scale=".6 .6 .6" position="-1.794 -1.349 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
+   <a-image position="-12.366 2.322 -4.469" src="#HM72" height="5" width="5" geometry="height:2;width:1.5"
+   event-set__down="_event: mousedown; _target: #artistTextHM7; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM7; visible: false">
+   <a-text id="artistTextHM7" value="Blake Tupman \n Relying On Oneself \n Denim, Digital Illustration, Thread" align="center" color="#000" visible="false" scale=".6 .6 .6" position="-1.794 -1.349 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
 
-   <a-image position="-7.518 2.322 1.851" src="#HM5" height="5" width="5" geometry="height:2;width:1.5" rotation="0 -90 0"></a-image>
-   <a-image position="-7.511 2.322 -0.376" src="#HM6" height="5" width="5" geometry="height:2;width:1.5" rotation="0 -90 0"></a-image>
+   <a-image position="-7.518 2.322 1.851" src="#HM5" height="5" width="5" geometry="height:2;width:1.5" rotation="0 -90 0"
+   event-set__down="_event: mousedown; _target: #artistTextHM5; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM5; visible: false">
+   <a-text id="artistTextHM5" value="Chloe Greve \n Consensual \n Digital" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.043 -1.402 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
+   <a-image position="-7.511 2.322 -0.376" src="#HM6" height="5" width="5" geometry="height:2;width:1.5" rotation="0 -90 0"
+   event-set__down="_event: mousedown; _target: #artistTextHM6; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM6; visible: false">
+   <a-text id="artistTextHM6" value="Abigail Pearl \n Kites \n Acrylic, Colored Pencil, Ballpoint Pen" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.064 -1.409 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
 
-   <a-image position="-4.489 2.322 -7.227" src="#MA" height="5" width="5" geometry="height:1.75;width:2.5" rotation="0 90 0"></a-image>
-   <a-image position="-4.489 2.322 -10.449" src="#JA" height="5" width="5" geometry="height:2;width:2.2" rotation="0 90 0"></a-image>
+   <a-image position="-4.489 2.322 -7.227" src="#MA" height="5" width="5" geometry="height:1.75;width:2.5" rotation="0 90 0"
+   event-set__down="_event: mousedown; _target: #artistTextMA; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextMA; visible: false">
+   <a-text id="artistTextMA" value="Merit Award \n Haley Howell \n Infinite Book \n Letterpress" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.058 -1.479 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
+   <a-image position="-4.489 2.322 -10.449" src="#JA" height="5" width="5" geometry="height:2;width:2.2" rotation="0 90 0"
+   event-set__down="_event: mousedown; _target: #artistTextJA; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextJA; visible: false">
+   <a-text id="artistTextJA" value="Jurors Choice \n Jenny Choi \n The Lotus World \n Oil Mixed with Acrylic Paint on Unstretched Canvas" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.011 -1.491 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
   
-   <a-video src="#1stPlace" width="7" height="5.25" position="0.747 2.332 -13.598" geometry="height:2.25;width:4"></a-video>
-   <a-image position="-2.927 2.322 -13.598" src="#2ndPlace" height="5" width="5" geometry="height:1.75;width:2.5;segmentsHeight:2"></a-image>
-   <a-image position="4.434 2.322 -13.598" src="#3rdPlace" height="5" width="5" geometry="height:1.75;width:2.5"></a-image>
+   <a-video src="#1stPlace" videohandler1 width="7" height="5.25" position="0.747 2.332 -13.598" geometry="height:2.25;width:4"
+   event-set__down="_event: mousedown; _target: #artistText1stPlace; visible: true"
+   event-set__up="_event: mouseup; _target: #artistText1stPlace; visible: false">
+   <a-text id="artistText1stPlace" value="1st Place \n Mikai Arion \n Sanctuary Part One (A Docupoem) \n Digital Film/Moving Image" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.023 -1.578 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-video>
+   <a-image position="-2.927 2.322 -13.598" src="#2ndPlace" height="5" width="5" geometry="height:1.75;width:2.5;segmentsHeight:2"
+   event-set__down="_event: mousedown; _target: #artistText2ndPlace; visible: true"
+   event-set__up="_event: mouseup; _target: #artistText2ndPlace; visible: false">
+   <a-text id="artistText2ndPlace" value="2nd Place \n Limei Lai \n Traveling \n Oil on Canvas" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.145 -1.406 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
+   <a-image position="4.434 2.322 -13.598" src="#3rdPlace" height="5" width="5" geometry="height:1.75;width:2.5"
+   event-set__down="_event: mousedown; _target: #artistText3rdPlace; visible: true"
+   event-set__up="_event: mouseup; _target: #artistText3rdPlace; visible: false">
+   <a-text id="artistText3rdPlace" value="3rd Place \n Johanna Oppeck \n Bizarre Systems (Series) \n Ceramic, Enamel Paint" align="center" color="#000" visible="false" scale=".6 .6 .6" position="-0.107 -1.435 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
  
-   <a-image position="6.063 2.322 -11.866" src="#HM15" height="5" width="5" geometry="height:2.2;width:1.5" rotation="0 -90 0"></a-image>
-   <a-image position="6.08 2.332 -8.932" src="#HM141" height="5" width="5" geometry="height:1.8;width:2.5" rotation="0 -90 0"></a-image>
-   <a-image position="6.08 2.332 -6.288" src="#HM142" height="5" width="5" geometry="height:1.8;width:2.5" rotation="0 -90 0"></a-image>
-   <a-video src="#HM143" width="7" height="5.25" position="6.081 2.322 -2.874" geometry="height:2;width:4" rotation="0 -90 0"></a-video>
+   <a-image position="6.063 2.322 -11.866" src="#HM15" height="5" width="5" geometry="height:2.2;width:1.5" rotation="0 -90 0"
+   event-set__down="_event: mousedown; _target: #artistTextHM15; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM15; visible: false">
+   <a-text id="artistTextHM15" value="Elene Shavgulidze \n Hairy \n Ink" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.174 -1.538 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
+   <a-image position="6.08 2.332 -8.932" src="#HM141" height="5" width="5" geometry="height:1.8;width:2.5" rotation="0 -90 0"
+   event-set__down="_event: mousedown; _target: #artistTextHM14; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM14; visible: false">
+   <a-text id="artistTextHM14" value="Alejandra Arias Sevilla \n Flip Books (Ni Unx Más) \n Letterpress, Flip books" align="center" color="#000" visible="false" scale=".6 .6 .6" position="1.379 -1.476 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
+   <a-image position="6.08 2.332 -6.288" src="#HM142" height="5" width="5" geometry="height:1.8;width:2.5" rotation="0 -90 0"
+   event-set__down="_event: mousedown; _target: #artistTextHM14; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM14; visible: false">
+   <a-text id="artistTextHM14" value="Alejandra Arias Sevilla \n Flip Books (Ni Unx Más) \n Letterpress, Flip books" align="center" color="#000" visible="false" scale=".6 .6 .6" position="1.379 -1.476 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
+   <a-video src="#HM143" videohandler3 width="7" height="5.25" position="6.081 2.322 -2.874" geometry="height:2;width:4" rotation="0 -90 0"
+   event-set__down="_event: mousedown; _target: #artistTextHM143; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM143; visible: false">
+   <a-text id="artistTextHM143" value="Alejandra Arias Sevilla \n Flip Books (Ni Unx Más) \n Letterpress, Flip books" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.063 -1.475 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-video>
 
-   <a-video src="#HM8" width="7" height="5.25" position="7.717 2.332 5.49" geometry="height:2.25;width:4" rotation="0 -90 0"></a-video>
+   <a-video src="#HM8" videohandler2 width="7" height="5.25" position="7.717 2.332 5.49" geometry="height:2.25;width:4" rotation="0 -90 0"
+   event-set__down="_event: mousedown; _target: #artistTextHM8; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM8; visible: false">
+   <a-text id="artistTextHM8" value="Emmi Stonier \n A Dog Called Rage \n Video Piece" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.012 -1.531 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-video>
 
    
-   <a-image position="6.074 2.322 1.517" src="#HM11" height="5" width="5" geometry="height:1.5;width:2" rotation="0 -90 -90"></a-image>
-   <a-image position="3.114 2.19 -1.466" src="#HM12" height="5" width="5" geometry="height:2;width:1.5"></a-image>
-   <a-image position="-2.604 2.19 -4.07" src="#HM4" height="5" width="5" geometry="height:2;width:1.5"></a-image> 
+   <a-image position="6.074 2.322 1.517" src="#HM11" height="5" width="5" geometry="height:1.5;width:2" rotation="0 -90 -90"
+   event-set__down="_event: mousedown; _target: #artistTextHM11; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM11; visible: false">
+   <a-text id="artistTextHM11" value="Eliza Arroyo-Gonzalez \n Untangle Me \n Acrylic Paint on Canvas" align="center" color="#000" visible="false" scale=".6 .6 .6" position="01.475 -0.039 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5" rotation="1 1 90"></a-text>>
+  </a-image>
+   <a-image position="3.114 2.19 -1.466" src="#HM12" height="5" width="5" geometry="height:2;width:1.5"
+   event-set__down="_event: mousedown; _target: #artistTextHM12; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM12; visible: false">
+   <a-text id="artistTextHM12" value="Jordan Brown \n Untitled \n Ceramic, Spray Paint, MDF, Turf" align="center" color="#000" visible="false" scale=".6 .6 .6" position="-0.009 -1.635 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image>
+   <a-image position="-2.604 2.19 -4.07" src="#HM4" height="5" width="5" geometry="height:2;width:1.5"
+   event-set__down="_event: mousedown; _target: #artistTextHM4; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHM4; visible: false">
+   <a-text id="artistTextHM4" value="Long Nguyen \n Untitled \n Ceramic and Glaze" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.023 -1.623 0.4"
+   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+  </a-image> 
 
 
     <!-- Ground -->

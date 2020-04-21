@@ -1,30 +1,53 @@
-// play video when user gets close
+// play video when user cursor hovers over video and pauses when hovering off video
 
-
-const video = document.getElementById('1stPlace');
-video.pause();
-AFRAME.registerComponent('listener', {
-  tick: function () {
-    const userPosition = this.el.getAttribute('position')["z"];
-
-    if (userPosition <= -13) {
-      video.play();
-    } else {
-      video.pause();
-    }
+const vid1 = document.getElementById('1stPlace');
+//video.pause();
+AFRAME.registerComponent('videohandler1', {
+  init: function () {
+    this.el.addEventListener('mouseenter',function(){
+      vid1.play();
+   });
+   this.el.addEventListener('mouseleave',function(){
+      vid1.pause();
+   })
   }
 });
 
-const video2 = document.getElementById('HM8');
-video.pause();
-AFRAME.registerComponent('listener', {
-  tick: function () {
-    const userPosition = this.el.getAttribute('position')["z"];
+const vid2 = document.getElementById('HM8');
+//video.pause();
+AFRAME.registerComponent('videohandler2', {
+  init: function () {
+    this.el.addEventListener('mouseenter',function(){
+      vid2.play();
+   });
+   this.el.addEventListener('mouseleave',function(){
+      vid2.pause();
+   })
+  }
+});
 
-    if (userPosition <= 4) {
-      video.play();
-    } else {
-      video.pause();
-    }
+const vid3 = document.getElementById('HM143');
+//video.pause();
+AFRAME.registerComponent('videohandler3', {
+  init: function () {
+    this.el.addEventListener('mouseenter',function(){
+      vid3.play();
+   });
+   this.el.addEventListener('mouseleave',function(){
+      vid3.pause();
+   })
+  }
+});
+
+const vid4 = document.getElementById('HM1');
+//video.pause();
+AFRAME.registerComponent('videohandler4', {
+  init: function () {
+    this.el.addEventListener('mouseenter',function(){
+      vid4.play();
+   });
+   this.el.addEventListener('mouseleave',function(){
+      vid4.pause();
+   })
   }
 });
