@@ -1,7 +1,7 @@
 // play video when user cursor hovers over video and pauses when hovering off video
 
 const vid1 = document.getElementById('1stPlace');
-vid1.pause();
+//vid1.pause();
 AFRAME.registerComponent('videohandler1', {
   init: function () {
     this.el.addEventListener('mouseenter',function(){
@@ -14,7 +14,7 @@ AFRAME.registerComponent('videohandler1', {
 });
 
 const vid2 = document.getElementById('HM8');
-vid2.pause();
+//vid2.pause();
 AFRAME.registerComponent('videohandler2', {
   init: function () {
     this.el.addEventListener('mouseenter',function(){
@@ -27,7 +27,7 @@ AFRAME.registerComponent('videohandler2', {
 });
 
 const vid3 = document.getElementById('HM143');
-vid3.pause();
+//vid3.pause();
 AFRAME.registerComponent('videohandler3', {
   init: function () {
     this.el.addEventListener('mouseenter',function(){
@@ -40,7 +40,7 @@ AFRAME.registerComponent('videohandler3', {
 });
 
 const vid4 = document.getElementById('HM1');
-vid4.pause();
+//vid4.pause();
 AFRAME.registerComponent('videohandler4', {
   init: function () {
     this.el.addEventListener('mouseenter',function(){
