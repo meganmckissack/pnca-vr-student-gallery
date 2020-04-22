@@ -17,6 +17,7 @@
 
   <a-scene>
 
+
     <!-- Load Assets -->
     <a-assets>
       <!-- global -->
@@ -54,10 +55,17 @@
 
         <!-- Video -->
 
+<<<<<<< HEAD
         <video id="1stPlace" autoplay:false webkit-playsinline playsinline src="img/art_files/video/1st-Place.mp4"></video>
         <video id="HM8" autoplay:false loop="true" webkit-playsinline playsinline src="img/art_files/video/HM8.mp4"></video>
         <video id="HM143" autoplay:false loop="true" webkit-playsinline playsinline src="img/art_files/video/HM14-3.mp4"></video>
         <video id="HM1" autoplay:false loop="true" webkit-playsinline playsinline src="img/art_files/video/HM1.mp4"></video> 
+=======
+        <video id="1stPlace" autoplay loop="true" webkit-playsinline playsinline crossOrigin="anonymous" src="img/art_files/video/1st-Place.mp4"></video>
+        <video id="HM8" autoplay loop="true" webkit-playsinline playsinline  crossOrigin="anonymous"src="img/art_files/video/HM8.mp4"></video>
+        <video id="HM143" autoplay loop="true" webkit-playsinline playsinline crossOrigin="anonymous" src="img/art_files/video/HM14-3.mp4"></video>
+        <video id="HM1" autoplay loop="true" webkit-playsinline playsinline crossOrigin="anonymous" src="img/art_files/video/HM1.mp4"></video>
+>>>>>>> 5a776109ec12af0f750cde9d6d8a3ec8c83b6ec0
     </a-assets>
 
     <!-- User / Camera -->
@@ -86,7 +94,7 @@
 
     <a-image position="0.305 1.806 8.095" src="#frontDoor" height="5" width="5" geometry="height:3.75;width:6" rotation="0 180 0"></a-image>
 
-   <!--  <a-image position="-8.37 1.974 -4.403" src="#roomDoor" height="5" width="5" geometry="height:4;width:2"></a-image>-->
+   <!-- <a-image position="-8.37 1.974 -4.403" src="#roomDoor" height="5" width="5" geometry="height:4;width:2"></a-image>-->
 
    <!-- Artwork -->
     <a-image position="-4.489 2.322 6.718" src="#HM91" height="5" width="5" geometry="height:1.5;width:2.2" rotation="0 90 0"
@@ -121,12 +129,20 @@
    geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
   </a-image>
 
+<<<<<<< HEAD
   <a-video src="#HM1" videohandler4 width="7" height="5.25" position="-10.080 2.322 3.529" geometry="height:2.25;width:4" rotation="0 180 0"
+=======
+  <a-video src="#HM1" videohandler4 width="7" height="5.25" position="-10.260 2.322 3.456" geometry="height:2.25;width:4" rotation="0 180 0"
+>>>>>>> 5a776109ec12af0f750cde9d6d8a3ec8c83b6ec0
   event-set__down="_event: mousedown; _target: #artistTextHM1; visible: true"
   event-set__up="_event: mouseup; _target: #artistTextHM1; visible: false">
   <a-text id="artistTextHM1" value="Hayato Kikkawa \n The Puppets \n Video Edited Puppet Show" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.023 -1.578 0.4"
   geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
+<<<<<<< HEAD
  </a-video>
+=======
+  </a-video>
+>>>>>>> 5a776109ec12af0f750cde9d6d8a3ec8c83b6ec0
    <a-image position="-12.653 2.322 2.237" src="#HM2" height="5" width="5" geometry="height:2;width:1.5" rotation="0 90 0"
    event-set__down="_event: mousedown; _target: #artistTextHM2; visible: true"
    event-set__up="_event: mouseup; _target: #artistTextHM2; visible: false">
@@ -185,7 +201,7 @@
    geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
   </a-image>
   
-   <a-video src="#1stPlace" videohandler1 width="7" height="5.25" position="0.747 2.332 -13.598" geometry="height:2.25;width:4"
+   <a-video src="#1stPlace" videohandler1 width="7" height="5.25" position="0.747 2.322 -13.598" geometry="height:2.25;width:4"
    event-set__down="_event: mousedown; _target: #artistText1stPlace; visible: true"
    event-set__up="_event: mouseup; _target: #artistText1stPlace; visible: false">
    <a-text id="artistText1stPlace" value="1st Place \n Mikai Arion \n Sanctuary Part One (A Docupoem) \n Digital Film/Moving Image" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.023 -1.578 0.4"
@@ -256,6 +272,8 @@
    geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5"></a-text>>
   </a-image> 
 
+   
+   
 
     <!-- Ground -->
     <a-grid id="ground" static-body material="src: #floor; repeat: 20 20;" rotation="0 -90 0" geometry="height:35;width:35"></a-grid>
