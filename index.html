@@ -51,13 +51,14 @@
       <img id="HM15" src="img/art_files/HM15.PNG">
       <img id="JA" src="img/art_files/Jurors-Choice.PNG">
       <img id="MA" src="img/art_files/Merit-Award.jpeg">
+      <img id="HMnew" src="img/art_files/HMnew.jpg">
 
         <!-- Video -->
 
-        <video id="1stPlace" autoplay loop="true" webkit-playsinline crossOrigin="anonymous" src="img/art_files/video/1st-Place.mp4"></video>
-        <video id="HM8" autoplay loop="true" webkit-playsinline crossOrigin="anonymous"src="img/art_files/video/HM8.mp4"></video>
-        <video id="HM143" autoplay loop="true" webkit-playsinline crossOrigin="anonymous" src="img/art_files/video/HM14-3.mp4"></video>
-        <video id="HM1" autoplay loop="true" webkit-playsinline crossOrigin="anonymous" src="img/art_files/video/HM1.mp4"></video>
+        <video id="1stPlace" loop="true" webkit-playsinline preload ="auto" autoload="true" crossOrigin="anonymous" src="img/art_files/video/1st-Place.mp4"></video>
+        <video id="HM8" loop="true" webkit-playsinline preload ="auto" autoload="true" crossOrigin="anonymous"src="img/art_files/video/HM8.mp4"></video>
+        <video id="HM143" loop="true" webkit-playsinline preload ="auto" autoload="true" crossOrigin="anonymous" src="img/art_files/video/HM14-3.mp4"></video>
+        <video id="HM1" loop="true" webkit-playsinline preload ="auto" autoload="true" crossOrigin="anonymous" src="img/art_files/video/HM1.mp4"></video>
     </a-assets>
 
     <!-- User / Camera -->
@@ -117,7 +118,7 @@
    geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5f5f5"></a-text>>
   </a-image>
 
-  <a-video src="#HM1" videohandler4 width="7" height="5.25" position="-10.260 2.322 3.456" geometry="height:2.25;width:4" rotation="0 180 0"
+  <a-video src="#HM1" videohandler4 width="7" height="5.25" position="-10.260 2.322 3.456" geometry="height:2.25;width:4" rotation="0 180 0" autoplay="true"
   event-set__down="_event: mousedown; _target: #artistTextHM1; visible: true"
   event-set__up="_event: mouseup; _target: #artistTextHM1; visible: false">
   <a-text id="artistTextHM1" value="Hayato Kikkawa \n The Puppets \n Video Edited Puppet Show" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.023 -1.578 0.4"
@@ -167,6 +168,12 @@
    <a-text id="artistTextHM6" value="Abigail Pearl \n Kites \n Acrylic, Colored Pencil, Ballpoint Pen" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.064 -1.409 0.4"
    geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5f5f5"></a-text>>
   </a-image>
+  <a-image position="-13.329 2.322 -3.031" src="#HMnew" height="5" width="5" geometry="height:2;width:2" rotation="0 90 0" 
+   event-set__down="_event: mousedown; _target: #artistTextHMnew; visible: true"
+   event-set__up="_event: mouseup; _target: #artistTextHMnew; visible: false">
+    <a-text id="artistTextHMnew" value="Rowan Kingsbury \n Rose Tinted \n Digital" align="center" color="#000" visible="false" scale="0.6 0.6 0.6" position="-0.009 -1.402 0.4" 
+    geometry="primitive:plane;height:1.5;width:5" material="color:#f5f5f5"></a-text>&gt;
+   </a-image>
 
    <a-image position="-4.489 2.322 -7.227" src="#MA" height="5" width="5" geometry="height:1.75;width:2.5" rotation="0 90 0"
    event-set__down="_event: mousedown; _target: #artistTextMA; visible: true"
@@ -181,7 +188,7 @@
    geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5f5f5"></a-text>>
   </a-image>
   
-   <a-video src="#1stPlace" videohandler1 width="7" height="5.25" position="0.747 2.322 -13.598" geometry="height:2.25;width:4"
+   <a-video src="#1stPlace" videohandler1 width="7" height="5.25" position="0.747 2.322 -13.598" geometry="height:2.25;width:4" autoplay="true"
    event-set__down="_event: mousedown; _target: #artistText1stPlace; visible: true"
    event-set__up="_event: mouseup; _target: #artistText1stPlace; visible: false">
    <a-text id="artistText1stPlace" value="1st Place \n Mikai Arion \n Sanctuary Part One (A Docupoem) \n Digital Film/Moving Image" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.023 -1.578 0.4"
@@ -218,14 +225,14 @@
    <a-text id="artistTextHM14" value="Alejandra Arias Sevilla \n Flip Books (Ni Unx Más) \n Letterpress, Flip books" align="center" color="#000" visible="false" scale=".6 .6 .6" position="1.379 -1.476 0.4"
    geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5f5f5"></a-text>>
   </a-image>
-   <a-video src="#HM143" videohandler3 width="7" height="5.25" position="6.081 2.322 -2.874" geometry="height:2;width:4" rotation="0 -90 0"
+   <a-video src="#HM143" videohandler3 width="7" height="5.25" position="6.081 2.322 -2.874" geometry="height:2;width:4" rotation="0 -90 0" autoplay="true"
    event-set__down="_event: mousedown; _target: #artistTextHM143; visible: true"
    event-set__up="_event: mouseup; _target: #artistTextHM143; visible: false">
    <a-text id="artistTextHM143" value="Alejandra Arias Sevilla \n Flip Books (Ni Unx Más) \n Letterpress, Flip books" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.063 -1.475 0.4"
    geometry="primitive: plane; height: 1.5; width: auto" material="color: #f5f5f5"></a-text>>
   </a-video>
 
-   <a-video src="#HM8" videohandler2 width="7" height="5.25" position="7.717 2.332 5.49" geometry="height:2.25;width:4" rotation="0 -90 0"
+   <a-video src="#HM8" videohandler2 width="7" height="5.25" position="7.717 2.332 5.49" geometry="height:2.25;width:4" rotation="0 -90 0" autoplay="true"
    event-set__down="_event: mousedown; _target: #artistTextHM8; visible: true"
    event-set__up="_event: mouseup; _target: #artistTextHM8; visible: false">
    <a-text id="artistTextHM8" value="Emmi Stonier \n A Dog Called Rage \n Video Piece" align="center" color="#000" visible="false" scale=".6 .6 .6" position="0.012 -1.531 0.4"
